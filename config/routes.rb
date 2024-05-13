@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # show all tasks
-  get "index", to: "tasks#index"
+  get "/index", to: "tasks#index"
+
+  # show one / read one 
+  get "/index/:id", to: "tasks#show", as: "task"
+
 end

@@ -1,5 +1,5 @@
 <h1>Show all tasks</h1>
 
 <% @tasks.each do |task| %>
-  <p><%= task.title %></p>
+  <p><%= link_to task.title, "index/#{task.id}" %></p>
 <% end %>
