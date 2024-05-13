@@ -1,5 +1,9 @@
 <h1>Show all tasks</h1>
 
 <% @tasks.each do |task| %>
-  <p><%= link_to task.title, "index/#{task.id}" %></p>
+  <p><%= link_to task.title, "tasks/#{task.id}" %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "➕ Create New Task", "/tasks/new" %>

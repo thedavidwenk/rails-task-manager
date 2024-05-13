@@ -9,9 +9,14 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # show all tasks
-  get "/index", to: "tasks#index"
+  get "/tasks", to: "tasks#index"
+
+  # create a new task 
+  post "/tasks", to: "tasks#create"
+  get "/tasks/new", to: "tasks#new"
+
 
   # show one / read one 
-  get "/index/:id", to: "tasks#show", as: "task"
+  get "/tasks/:id", to: "tasks#show", as: "task"
 
 end
