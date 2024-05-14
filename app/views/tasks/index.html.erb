@@ -1,7 +1,10 @@
 <h1>Show all tasks</h1>
 
 <% @tasks.each do |task| %>
-  <p><%= link_to task.title, "tasks/#{task.id}" %></p>
+  <p><%= link_to task.title, "tasks/#{task.id}" %> <%= link_to "delete task", 
+  "tasks/#{task.id}",
+  data: {turbo_method: :delete, turbo_confirm: "Are your sure?"}
+%></p>
 <% end %>
 
 <hr>
