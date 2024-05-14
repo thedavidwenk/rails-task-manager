@@ -1,0 +1,21 @@
+<h1>Edit <%= @task.title %></h1>
+
+
+<div>
+  <%= form_with model: @task do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+    <%= t.label :details %>
+    <%= t.text_field :details %>
+    <%= t.submit %>
+  <% end %>
+</div>
+
+
+<hr>
+<%= link_to "Back to Task View", "/tasks/#{@task.id}" %>
+
+
+
+
+
