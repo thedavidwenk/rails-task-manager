@@ -4,15 +4,13 @@
 </div>
 
 <ul class="list-group">
-
   <% @tasks.each do |task| %>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to task.title, "tasks/#{task.id}" %> 
-        <%= link_to "", "tasks/#{task.id}", class: "fa-solid fa-trash" , data: {turbo_method: :delete, turbo_confirm: "Are your sure?"} %>
-      </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= link_to task.title, "tasks/#{task.id}" %> 
+      <%= link_to "", "tasks/#{task.id}", class: "fa-solid fa-trash" , data: {turbo_method: :delete, turbo_confirm: "Are your sure?"} %>
+    </li>
   <% end %>
-
 </ul>
-<hr>
+
 
 
